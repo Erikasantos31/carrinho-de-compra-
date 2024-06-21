@@ -5,110 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body>opcao = []
+    carrinho_de_compra = []
+    total = []
+    item = ''
+    precos = [ ]
+    preco_total = []
     
-</body>
-</html>opcao = []
-carrinho_de_compra = []
-total = []
-item = ''
-precos = [ ]
-preco_total = []
-
-while opcao != 6: 
-
-    print('=-=' *20)
-    print('-----------------------menu de compra:---------------------#')
+    while opcao != 6: 
     
-    print()
-    print('1. Adicionar produto:                                      #')
-    print('2. Exibir sua lista:                                       #')
-    print('3. Excluir produto:                                        #')
-    print('4. Limpa  carrinho de compra:                              #')
-    print('5. Finalizar compra:                                       #') 
-    print('6. Sair do mercado:                                        #')
-    print()
-    print('=-=' *20)  
-    print()
-    opcao = int(input('Qual opção você deseja? '))
-           
-     # for indice in range(input(carrinho_de_compra)): 
-     #     print(f'{carrinho_de_compra[indice]}')
-    print()
-    print('=-=' *20)  
-    print()
-    if opcao == 1:
-        print('Opção 1-  Adicionar produto: ')
+        print('=-=' *20)
+        print('-----------------------menu de compra:---------------------#')
+        
         print()
-        item = input('Qual produto você deseja adiconar: ')
-        preco = float(input('Qual é o preço deste produto? '))
-        carrinho_de_compra.append(item)
-        precos.append(preco)
-        print(carrinho_de_compra)
-        print()
-        print('=-=' *20)   
-        print()
-    elif opcao == 2:
-        print('Opção 2 - Exibir sua lista ')
-        print()
-        tamanho = len(carrinho_de_compra)
-        for indice, item_carrinho, in enumerate(carrinho_de_compra):
-
-            preco = precos[indice]
-
-            print(f"{indice + 1}. {item_carrinho} - R${preco}")
-        print()
-
-    elif opcao == 3:
-        item = input('Opção 3- Digite o que você gostaria de retiar do seu carrinho? ')
-        print()
-        if item in carrinho_de_compra:
-            index = carrinho_de_compra.index(item)
-            carrinho_de_compra.remove(item)
-            preco = precos.pop(index)
-            print(f"{item} foi removido do carrinho e seu preço era : R${preco}")   
+        print('1. Adicionar produto:                                      #')
+        print('2. Exibir sua lista:                                       #')
+        print('3. Excluir produto:                                        #')
+        print('4. Limpa  carrinho de compra:                              #')
+        print('5. Finalizar compra:                                       #') 
+        print('6. Sair do mercado:                                        #')
         print()
         print('=-=' *20)  
         print()
-    elif opcao == 4:
-        print('Opção 4 - Limpar carrinho: ')
-        print()                    
-        itemc = input('Tem certeza que deseja limpar o carrinho? ')
-
-        if itemc.upper() == 'SIM':
-            for indice in range(carrinho_de_compra[item]):
-                print(indice)
+        opcao = int(input('Qual opção você deseja? '))
+               
+         # for indice in range(input(carrinho_de_compra)): 
+         #     print(f'{carrinho_de_compra[indice]}')
+        print()
+        print('=-=' *20)  
+        print()
+        if opcao == 1:
+            print('Opção 1-  Adicionar produto: ')
+            print()
+            item = input('Qual produto você deseja adiconar: ')
+            preco = float(input('Qual é o preço deste produto? '))
+            carrinho_de_compra.append(item)
+            precos.append(preco)
+            print(carrinho_de_compra)
+            print()
+            print('=-=' *20)   
+            print()
+        elif opcao == 2:
+            print('Opção 2 - Exibir sua lista ')
+            print()
+            tamanho = len(carrinho_de_compra)
+            for indice, item_carrinho, in enumerate(carrinho_de_compra):
+    
+                preco = precos[indice]
+    
+                print(f"{indice + 1}. {item_carrinho} - R${preco}")
+            print()
+    
+        elif opcao == 3:
+            item = input('Opção 3- Digite o que você gostaria de retiar do seu carrinho? ')
+            print()
+            if item in carrinho_de_compra:
                 index = carrinho_de_compra.index(item)
                 carrinho_de_compra.remove(item)
                 preco = precos.pop(index)
-            print('Carrinho não contem mais itens.')
-        elif itemc.upper() == 'NÃO'and itemc == 'NAO':
-            print('voltando ao menu principal')
-           
-        print()
-        print('=-=' *20)  
-        print()
-
-    elif opcao == 5:
-        print('Opção 5 - finalizar compra')
-        print()
-        preco_total = sum(precos) 
-        soma = preco_total
-        print(f' valor sua compra foi {soma}')
-           
-        print()
-        print('=-=' *20)  
-        print()
-
-    elif opcao == 6:
-        print('SAINDO DO MERCADO, VOLTE SEMPRE' )
-        print()
-        
-        print('OPÇÃO INVALIDA.....')
-        break
-                            
-
-
-
-                    
-    # menu_de_compra()
+                print(f"{item} foi removido do carrinho e seu preço era : R${preco}")   
+            print()
+            print('=-=' *20)  
+            print()
+        elif opcao == 4:
+            print('Opção 4 - Limpar carrinho: ')
+            print()                    
+            itemc = input('Tem certeza que deseja limpar o carrinho? ')
+    
+            if itemc.upper() == 'SIM':
+                for indice in range(carrinho_de_compra[item]):
+                    print(indice)
+                    index = carrinho_de_compra.index(item)
+                    carrinho_de_compra.remove(item)
+                    preco = precos.pop(index)
+                print('Carrinho não contem mais itens.')
+            elif itemc.upper() == 'NÃO'and itemc == 'NAO':
+                print('voltando ao menu principal')
+               
+            print()
+            print('=-=' *20)  
+            print()
+    
+        elif opcao == 5:
+            print('Opção 5 - finalizar compra')
+            print()
+            preco_total = sum(precos) 
+            soma = preco_total
+            print(f' valor sua compra foi {soma}')
+               
+            print()
+            print('=-=' *20)  
+            print()
+    
+        elif opcao == 6:
+            print('SAINDO DO MERCADO, VOLTE SEMPRE' )
+            print()
+            
+            print('OPÇÃO INVALIDA.....')
+            break
+                                
+    
+    
+    
+                        
+        # menu_de_compra()
+    
+</body>
+</html>
